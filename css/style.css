@@ -1,0 +1,939 @@
+*{margin: 0;
+  
+  
+
+}
+body{font-family: 'Roboto', sans-serif;
+    background-image: url(../Images/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.navbar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: #151515;
+    color: white;
+    justify-content: space-between;
+
+}
+
+.navbar-links {
+    height: 100%;
+    font-size: 18px;
+    margin-right: 300px;
+
+}
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar-links li {
+    list-style: none;
+    
+}
+
+.navbar-links li a {
+    display:block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    
+
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+    border-radius: 10px;
+}
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.navbar a:hover{
+    color: rgb(235, 50, 50);
+}
+.primary-logo{
+    height: 100px;
+}
+    
+
+@media (max-width: 991px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+    .ticket-prices{
+        flex-direction: column;
+        padding: 30px;
+        font-size: 15px;
+
+    }
+    .showtimes-container{
+        flex-direction: column;
+        font-size: 10px;
+        
+    }
+    
+    .cs-desc {
+        flex-direction: column;
+        font-size: 12px;
+    }
+    
+    .coming-soon-page-container{
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        
+    }
+    
+    .cinemas{
+    flex-direction: column;
+    padding: 30px;
+    font-size: 15px;
+    }
+    .coming-soon-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+    .action-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+
+    .animation-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+
+    .comedy-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+
+    .crime-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+    .drama-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+
+    .horror-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+
+    .romance-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+    
+    .sci-fi-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+    .thriller-container{
+        margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+        padding: 20px;
+     text-align: center;
+    }
+    form .half{
+      flex-direction: column;
+    }
+    form .half .item{
+      width: 100%;
+    }
+    form .action{
+      display: flex;
+      flex-direction: column;
+    }
+    form .action input{
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    .footer ul{
+        display: flex;
+        flex-direction: column;
+        background-color:black;
+       
+
+    }
+    .footer ul li {
+               
+                padding: 10px;
+
+    }
+    
+}
+
+
+.container{
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+    
+
+.now-showing-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.now-showing-list{
+    display: flex;
+    height: 300px;
+    align-items: center;
+    margin: auto;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    
+}
+
+.now-showing-item{
+    margin-right: 30px;
+    position: relative;
+    
+    
+}
+.now-showing-item:hover .now-showing-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+.now-showing-item:hover .now-showing-item-title,
+.now-showing-item:hover .now-showing-list-item-desc,
+.now-showing-item:hover .now-showing-item-button{
+    opacity: 3;
+}
+
+.now-showing-item img{
+    width: 290px;
+    height: 168px;
+    object-fit:cover;
+    transition: all 1s ease-in-out;
+    border-radius: 10px;
+    
+    
+
+}
+
+.now-showing-item-title{
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 0%;
+    left: 20px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    color: white;
+    
+    
+}
+.now-showing-list-item-desc{
+    
+    background-color: #333;
+  padding: 0 20px;
+  font-size: 14px;
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  width: 230px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+  color: white;
+    
+}
+.now-showing-item-button{
+    padding: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  opacity: 0;
+  top:100%;
+  transition: 1s all ease-in-out;
+}
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.now-showing-tittle{
+    padding-top: 30px;
+   text-align: center;
+    font-size: 40px;
+    color: white;
+    
+}
+.showtime{
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+table{
+    border-collapse: collapse;
+    align-items: center;
+    width: 100%;
+}
+table, td, th, tr{
+    border:1px solid white;
+}
+td,th{padding: 7px;
+}
+tbody{
+    align-items: center;
+    font-weight: bold;
+    color: white;   
+}
+th{
+    color: red;
+}
+
+
+    
+
+.tickets-tittle{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    
+}
+
+
+.ticket-prices{
+    color: white;
+    display: flex;
+   justify-content:space-around;
+   align-items: center;
+   font-size: 30px;
+   font-family: 'Roboto', sans-serif;
+   list-style-type: none;
+   padding-bottom: 20px;
+   font-weight: bold;
+   padding-top: 30px;
+   
+   
+}
+.d2, .d3, .d3-prem{
+    color: white;
+    display: flex;
+   justify-content:space-around;
+   align-items: center;
+   font-size: 40px;
+   font-family: 'Roboto', sans-serif;
+   list-style:none;
+   font-weight: bold;
+   padding: 10px;
+ 
+}
+
+.ticket-2d, .ticket-3d{
+    color: rgb(231, 65, 65);
+    text-align: center;
+    
+
+   
+}
+.ticket-3d-premium{
+    color: rgb(235, 210, 69);
+    text-align: center;
+    
+}
+.ticket-prices{
+    background-image: url(../BANNER.png);
+}
+.cinema-location-tittle{
+    padding-top: 40px;
+    padding-bottom: 20px;
+   text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+    
+
+}
+.cinemas{
+    background-color: rgb(247, 55, 55);
+    color: white;
+    display: flex;
+   justify-content:space-around;
+   align-items: center;
+   font-size: 25px;
+   font-family: 'Roboto', sans-serif;
+   list-style-type: disc;
+   padding-bottom: 20px;
+   font-weight: bold;
+   padding-top: 20px;
+   padding: 20px;
+   
+}
+.now-showing-tittle-2{
+    padding-top: 30px;
+    text-align: left;
+     font-size: 30px;
+     color: white;
+}
+.coming-soon-item-button{
+    padding: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  opacity: 0;
+  top:50%;
+  transition: 1s all ease-in-out;
+}
+
+   
+.coming-soon-tittle{
+    padding-right: 30px;
+     font-size: 30px;
+     color: white;
+     margin-left: 30px;
+}
+.coming-soon-container{
+    max-width: 986px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap:6rem;
+    margin-top: 2rem;
+    
+}
+    
+
+.box .box-img img {
+    object-fit: cover;
+    
+}
+img{
+    width: 290px;
+    height: 168px;
+    object-fit:cover;
+    border-radius: 10px;
+}
+.box .box-img img:hover{
+    transform: translateY(-10px);
+    transition: 0,2s all linear;
+}
+.box h3{
+    color: white;
+    font-size: 0.9;
+    font-weight: 700;
+}
+.movie-cat-container{
+   background-color: black;
+}
+
+.action-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px ;
+}
+.act{
+color: white;
+text-decoration: none;
+}
+.animation-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+}
+.anim{
+color: white;
+text-decoration: none;
+}
+.comedy-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+}
+.com{
+color: white;
+text-decoration: none;
+}
+.drama-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+}
+.dram{
+color: white;
+text-decoration: none;
+}
+.romance-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+}
+.rom{
+color: white;
+text-decoration: none;
+}
+.sci-fi-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+}
+.sci{
+color: white;
+text-decoration: none;
+}
+.thriller-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+}
+.thrill{
+color: white;
+text-decoration: none;
+}
+.horror-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+}
+.horror{
+color: white;
+text-decoration: none;
+}
+.crime-link{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+     list-style-type: none;
+    border-bottom: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+}
+.crim{
+color: white;
+text-decoration: none;
+}
+.cat-list{
+    padding-right: 50px;
+    
+}
+.action-container{
+    max-width: 986px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap:6rem;
+    margin-top: 2rem;
+    
+}
+.act-desc{
+    color: white;
+    text-align: justify;
+    margin-top: 10px;
+}
+.animation-container{
+    max-width: 986px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap:6rem;
+    margin-top: 2rem;
+    
+}
+.anim-desc{
+    color: white;
+    text-align: justify;
+    margin-top: 10px;
+}
+.comedy-container{
+    max-width: 986px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap:6rem;
+    margin-top: 2rem;
+    
+}
+.com-desc{
+    color: white;
+    text-align: justify;
+    margin-top: 10px;
+}
+.horror-container{
+    max-width: 986px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap:6rem;
+    margin-top: 2rem;
+    
+}
+.horror-desc{
+    color: white;
+    text-align: justify;
+    margin-top: 10px;
+}
+.crime-container{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;margin-top: 200px;
+    
+    
+}
+.drama-container{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;margin-top: 200px;
+      
+}
+.romance-container{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;margin-top: 200px;
+      
+}
+.sci-fi-container{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;margin-top: 200px;
+    
+}
+.thriller-container{
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;margin-top: 200px;
+      
+}
+.coming-soon-page-container{
+    height: fit-content;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.cs-tittle{
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+.cs-desc{
+    color: white;
+    text-align: justify;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #151515;
+    border-radius: 10px;
+}
+.cs-button{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    transition: 1s all ease-in-out;
+    cursor: pointer;
+}
+.footer{
+    margin-top: 20px;
+}
+.footer ul{
+    display: flex;
+    background-color:black;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px;
+}
+.footer ul li a{
+     list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+#copyrightfooter{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    background-color: black;
+    padding: 10px;
+}
+form{
+  max-width: 80%;
+  padding: 55px 30px;
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  }
+  
+  form .title h2{
+    letter-spacing: 6px;
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  form .half{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  form .half .item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 100%;
+    margin-right: 30px;
+  }
+  
+  form label{
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+  }
+  
+  form .half .item input{
+    border-radius: 4px;
+    outline: 0;
+    padding: 16px;
+    height: 25px;
+    font-size: 17px;
+    background-color: #151515;
+    color: white;
+  }
+  
+  form .full{
+    margin-bottom: 24px;
+     margin-right: 30px;
+  }
+  
+  form .full textarea{
+    border-radius: 4px;
+    outline: 0;
+    padding: 12px 16px;
+    font-size: 17px;
+    width: 100%; 
+    height: 210px;
+    margin-right: 30px;
+    color: white;
+    background-color: #151515;
+  }
+  
+  form .action{
+    margin-bottom: 32px;
+  }
+  
+  form .action input{
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 3px;
+    outline: 0;
+    padding: 0 20px 0 22px;
+    margin-right:30px;
+  }
+  
+  form .action input[type="submit"]{
+    background: rgb(255, 33, 33);
+    color: black;
+    width: 100%;
+  }
+  
+  .feedback-intro{
+      padding:20px;
+      background-color: black;
+      margin-bottom: 40px;
+      border-radius: 10px;
+  }
+  .contact-container{
+      display: block;
+      background-color: black;
+      color: white;
+      text-align: center;
+  }
+    
+  address{
+      margin-top: 20px;
+      padding: 30px;
+      font-size: 25px;
+      border-bottom: white;
+      font-style: normal;
+      
+  }
+  .cch{
+    font-size: 36px;
+    padding: 40px 0 0;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+  }
+  .operating-hours{
+      font-size: 15px;
+      margin-top: 30px;
+       color: white;
+       text-align: center;
+       background-color: black;
+       padding: 40px;
+  }
+
+  .opth{ 
+    font-size: 36px;
+    padding: 40px 0 0;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+  }
